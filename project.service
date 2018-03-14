@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve project
+After=network.target
+
+[Service]
+User=pavel
+Group=www-data
+WorkingDirectory=/home/pavel/flaskproject
+Environment="PATH=/home/pavel/flaskproject/projectenv/bin"
+ExecStart=/home/pavel/flaskproject/projectenv/bin/uwsgi --ini project.ini
+
+[Install]
+WantedBy=multi-user.target
