@@ -10,6 +10,7 @@ RUN apt-get install python-dev -y
 
 RUN pip install uwsgi
 RUN pip install flask
+RUN pip install statsd
 
 USER root
 
