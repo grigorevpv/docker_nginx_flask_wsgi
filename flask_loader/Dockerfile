@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Grigoryev Pavel
 
-COPY ./ .
+COPY ./ ./flask_loader/
 
 RUN apt-get update
 RUN apt-get install python-pip -y
@@ -14,4 +14,4 @@ RUN pip install statsd
 
 USER root
 
-CMD uwsgi --socket 0.0.0.0:80 --workers 4 --protocol=http -w wsgi:application
+CMD uwsgi --socket 0.0.0.0:80 --workers 4 --protocol=http -w ./flask_loader/wsgi:application

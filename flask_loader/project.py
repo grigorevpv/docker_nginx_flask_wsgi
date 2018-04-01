@@ -17,9 +17,9 @@ def hello():
     loader = CpuLoader(3000)
     loader.load()
 
-    return "<h1 style='color:blue'>Hello from backend one!</h1>"
+    return "<h1 style='color:blue'>Hello from backend!</h1>"
 
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0', port=80)
+    application.run(host='0.0.0.0', port=8081)
 
