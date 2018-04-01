@@ -1,10 +1,10 @@
 version: '3'
 services:
   web:
-    build: ./flask_loader/
+    build: ../flask_loader
     ports:
      - "8080:80"
   nginx:
-    build: ./nginx/
+    build: ../nginx
     ports:
      - "80:80"
