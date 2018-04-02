@@ -1,5 +1,5 @@
 from statsd import StatsClient
-from flask_loader.services.CpuLoader import CpuLoader
+from loader.services.CpuLoader import CpuLoader
 
 from flask import Flask
 application = Flask(__name__)
@@ -21,5 +21,5 @@ def hello():
 
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0', port=8081)
+    application.run(host='0.0.0.0', port=80)
 
