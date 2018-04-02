@@ -6,7 +6,7 @@ application = Flask(__name__)
 
 statsd = StatsClient(host='92.53.91.99',
                      port=8125,
-                     prefix='web_server_two',
+                     prefix='web_server_one',
                      maxudpsize=512)
 
 
@@ -17,7 +17,7 @@ def hello():
     loader = CpuLoader(3000)
     loader.load()
 
-    return "<h1 style='color:blue'>Hello from backend!</h1>"
+    return "<h1 style='color:blue'>Hello from backend one!</h1>"
 
 
 if __name__ == "__main__":
