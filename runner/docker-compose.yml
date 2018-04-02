@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: ../flask_loader
+    ports:
+     - "8080:80"
+  nginx:
+    build: ../nginx
+    ports:
+     - "80:80"
+  collector:
+    image: andreasjansson/collectd-write-graphite
+    env_file: ../collector/.env
